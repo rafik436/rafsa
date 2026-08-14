@@ -3,7 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Team RAFSA</title>
+
+<title>Team RAFSA | Telegram</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1738631787257862');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
+
 
 <style>
 *{
@@ -26,7 +44,6 @@ body{
   margin:auto;
 }
 
-/* TOP BUTTON */
 .top-btn{
   display:block;
   text-align:center;
@@ -51,7 +68,6 @@ body{
     inset 0 1px 1px white;
 }
 
-/* VERIFIED */
 .badge{
   width:max-content;
   margin:0 auto 18px;
@@ -61,7 +77,6 @@ body{
   font-weight:bold;
 }
 
-/* CARD */
 .card{
   padding:28px 20px;
   border-radius:25px;
@@ -75,7 +90,6 @@ body{
     inset 0 0 25px rgba(255,215,0,.04);
 }
 
-/* LOGO */
 .logo{
   width:100px;
   height:100px;
@@ -91,13 +105,12 @@ body{
 
   color:#111;
 
-  background:
-    linear-gradient(
-      135deg,
-      #fff4a3,
-      #ffd700,
-      #b8860b
-    );
+  background:linear-gradient(
+    135deg,
+    #fff4a3,
+    #ffd700,
+    #b8860b
+  );
 
   border:3px solid #ffe878;
 
@@ -127,7 +140,6 @@ h1{
   margin:12px 0 22px;
 }
 
-/* STATS */
 .stats{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -154,7 +166,6 @@ h1{
   font-size:13px;
 }
 
-/* FEATURES */
 .features{
   margin-top:22px;
 }
@@ -164,12 +175,11 @@ h1{
   padding:15px;
   border-radius:14px;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255,215,0,.13),
-      rgba(255,255,255,.04)
-    );
+  background:linear-gradient(
+    90deg,
+    rgba(255,215,0,.13),
+    rgba(255,255,255,.04)
+  );
 
   border-left:3px solid #ffd700;
 
@@ -177,7 +187,6 @@ h1{
   font-size:16px;
 }
 
-/* BUTTON */
 .main-btn{
   display:block;
   text-align:center;
@@ -188,13 +197,12 @@ h1{
 
   border-radius:15px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #fff0a0,
-      #ffd700,
-      #c99700
-    );
+  background:linear-gradient(
+    135deg,
+    #fff0a0,
+    #ffd700,
+    #c99700
+  );
 
   color:#111;
   font-size:19px;
@@ -230,7 +238,7 @@ h1{
 
 <div class="container">
 
-  <!-- TELEGRAM BUTTON TOP -->
+  <!-- TOP TELEGRAM BUTTON -->
   <a
     class="top-btn"
     id="topCta"
@@ -307,6 +315,7 @@ h1{
 
   </div>
 </div>
+
 
 <script>
 
