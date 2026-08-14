@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Team RAFSA | Telegram</title>
 
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -14,14 +13,12 @@ n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+s.parentNode.insertBefore(t,s)}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '1738631787257862');
-fbq('track', 'PageView');
+fbq('init','1738631787257862');
+fbq('track','PageView');
 </script>
-<!-- End Meta Pixel Code -->
-
 
 <style>
 *{
@@ -34,76 +31,53 @@ body{
   font-family:Arial,sans-serif;
   min-height:100vh;
   background:
-    radial-gradient(circle at top,#3a2b05 0%,#101827 42%,#050912 100%);
-  color:white;
-  padding:20px 15px 40px;
+  radial-gradient(circle at 50% 0%,#604900 0%,#17213a 30%,#050912 75%);
+  color:#fff;
+  padding:18px 14px 35px;
 }
 
 .container{
+  width:100%;
   max-width:520px;
   margin:auto;
 }
 
-.top-btn{
-  display:block;
-  text-align:center;
-  text-decoration:none;
-  color:#111;
-  font-size:19px;
-  font-weight:900;
-  padding:17px;
-  border-radius:15px;
-  margin-bottom:18px;
-
-  background:linear-gradient(
-    135deg,
-    #fff2a6,
-    #ffd700,
-    #c99700,
-    #ffe76a
-  );
-
-  box-shadow:
-    0 0 20px rgba(255,215,0,.45),
-    inset 0 1px 1px white;
-}
-
+/* VERIFIED */
 .badge{
+  display:block;
   width:max-content;
-  margin:0 auto 18px;
-  padding:9px 18px;
+  margin:5px auto 16px;
+  padding:9px 19px;
   border-radius:30px;
-  background:#08b957;
+  background:linear-gradient(135deg,#00c853,#00a844);
   font-weight:bold;
+  box-shadow:0 5px 20px rgba(0,200,83,.25);
 }
 
+/* CARD */
 .card{
-  padding:28px 20px;
-  border-radius:25px;
-
-  background:rgba(24,34,58,.92);
-
-  border:1px solid rgba(255,215,0,.45);
-
+  padding:27px 18px;
+  border-radius:27px;
+  background:rgba(24,35,61,.95);
+  border:1px solid rgba(255,215,0,.42);
   box-shadow:
-    0 0 35px rgba(255,215,0,.12),
-    inset 0 0 25px rgba(255,215,0,.04);
+    0 15px 45px rgba(0,0,0,.45),
+    0 0 30px rgba(255,215,0,.08);
 }
 
+/* LOGO */
 .logo{
   width:100px;
   height:100px;
   margin:auto;
-  border-radius:50%;
-
   display:flex;
   align-items:center;
   justify-content:center;
+  border-radius:50%;
 
+  color:#171717;
   font-size:25px;
   font-weight:900;
-
-  color:#111;
 
   background:linear-gradient(
     135deg,
@@ -113,20 +87,19 @@ body{
   );
 
   border:3px solid #ffe878;
-
-  box-shadow:0 0 25px rgba(255,215,0,.45);
+  box-shadow:0 0 28px rgba(255,215,0,.35);
 }
 
 h1{
   text-align:center;
-  margin-top:20px;
+  margin-top:18px;
   font-size:34px;
 
   background:linear-gradient(
     90deg,
-    #fff4a3,
+    #fff,
     #ffd700,
-    #fff
+    #fff2a6
   );
 
   -webkit-background-clip:text;
@@ -136,10 +109,11 @@ h1{
 .subtitle{
   text-align:center;
   color:#cbd5e1;
-  line-height:1.6;
-  margin:12px 0 22px;
+  line-height:1.55;
+  margin:10px 0 20px;
 }
 
+/* STATS */
 .stats{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -147,59 +121,41 @@ h1{
 }
 
 .stat{
-  padding:18px 8px;
   text-align:center;
-  border-radius:16px;
-
-  background:rgba(255,215,0,.08);
+  padding:17px 8px;
+  border-radius:17px;
+  background:rgba(255,215,0,.09);
   border:1px solid rgba(255,215,0,.18);
 }
 
 .stat strong{
   display:block;
-  font-size:24px;
+  font-size:25px;
   color:#ffd700;
 }
 
 .stat span{
   color:#cbd5e1;
   font-size:13px;
-}
-
-.features{
-  margin-top:22px;
-}
-
-.feature{
-  margin-bottom:11px;
-  padding:15px;
-  border-radius:14px;
-
-  background:linear-gradient(
-    90deg,
-    rgba(255,215,0,.13),
-    rgba(255,255,255,.04)
-  );
-
-  border-left:3px solid #ffd700;
-
-  color:#f8fafc;
-  font-size:16px;
-}
-
-.main-btn{
+  margin-top:4px;
   display:block;
+}
+
+/* TELEGRAM BUTTON - MEMBER KE NICHE */
+.telegram-btn{
+  display:block;
+  width:100%;
+  margin:17px 0 22px;
+  padding:18px 12px;
+
   text-align:center;
   text-decoration:none;
 
-  margin-top:22px;
-  padding:18px;
-
-  border-radius:15px;
+  border-radius:16px;
 
   background:linear-gradient(
     135deg,
-    #fff0a0,
+    #fff2a6,
     #ffd700,
     #c99700
   );
@@ -209,19 +165,47 @@ h1{
   font-weight:900;
 
   box-shadow:
-    0 0 22px rgba(255,215,0,.35);
+    0 0 25px rgba(255,215,0,.3),
+    inset 0 1px 1px rgba(255,255,255,.8);
 }
 
+.telegram-btn:active{
+  transform:scale(.98);
+}
+
+/* FEATURES */
+.features{
+  margin-top:5px;
+}
+
+.feature{
+  padding:15px;
+  margin-bottom:10px;
+  border-radius:14px;
+
+  background:linear-gradient(
+    90deg,
+    rgba(255,215,0,.13),
+    rgba(255,255,255,.035)
+  );
+
+  border-left:3px solid #ffd700;
+
+  color:#f1f5f9;
+  font-size:16px;
+}
+
+/* COUNTDOWN */
 .countdown{
   text-align:center;
-  margin-top:16px;
   color:#94a3b8;
-  font-size:14px;
+  font-size:13px;
+  margin-top:17px;
 }
 
 #timer{
   color:#ffd700;
-  font-size:19px;
+  font-size:18px;
   font-weight:bold;
 }
 
@@ -237,14 +221,6 @@ h1{
 <body>
 
 <div class="container">
-
-  <!-- TOP TELEGRAM BUTTON -->
-  <a
-    class="top-btn"
-    id="topCta"
-    href="https://t.me/+dwow3XCnuFZkNmE1">
-    🚀 JOIN TELEGRAM FREE
-  </a>
 
   <div class="badge">
     ✓ VERIFIED COMMUNITY
@@ -263,6 +239,7 @@ h1{
       announcements and community information.
     </p>
 
+    <!-- MEMBER / SINCE -->
     <div class="stats">
 
       <div class="stat">
@@ -277,6 +254,15 @@ h1{
 
     </div>
 
+    <!-- TELEGRAM BUTTON -->
+    <a
+      href="https://t.me/+dwow3XCnuFZkNmE1"
+      class="telegram-btn"
+      id="telegramBtn">
+      🚀 JOIN TELEGRAM FREE
+    </a>
+
+    <!-- FEATURES -->
     <div class="features">
 
       <div class="feature">
@@ -296,13 +282,6 @@ h1{
       </div>
 
     </div>
-
-    <a
-      class="main-btn"
-      id="mainCta"
-      href="https://t.me/+dwow3XCnuFZkNmE1">
-      🚀 JOIN TELEGRAM FREE
-    </a>
 
     <div class="countdown">
       Automatic redirect in
@@ -328,8 +307,7 @@ let redirected = false;
 const timer =
 document.getElementById("timer");
 
-const interval =
-setInterval(function(){
+const interval = setInterval(function(){
 
   seconds--;
 
@@ -347,32 +325,27 @@ setInterval(function(){
 },1000);
 
 
-function stopRedirect(){
+/* BUTTON CLICK */
+document
+.getElementById("telegramBtn")
+.addEventListener("click",function(){
 
   redirected = true;
-
   clearInterval(interval);
-}
+
+});
 
 
-document
-.getElementById("topCta")
-.addEventListener("click",stopRedirect);
-
-
-document
-.getElementById("mainCta")
-.addEventListener("click",stopRedirect);
-
-
+/* MEMBER DISPLAY */
 let count = 2845;
 
 setInterval(function(){
 
   count += Math.random() > .4 ? 1 : -1;
 
-  if(count < 2800)
+  if(count < 2800){
     count = 2800;
+  }
 
   document
   .getElementById("memberCount")
