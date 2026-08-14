@@ -1,296 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team RAFSA</title>
 
-  <title>Team RAFSA | Join Telegram</title>
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+body{
+  font-family:Arial,sans-serif;
+  min-height:100vh;
+  background:
+    radial-gradient(circle at top,#3a2b05 0%,#101827 42%,#050912 100%);
+  color:white;
+  padding:20px 15px 40px;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #172554);
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
+.container{
+  max-width:520px;
+  margin:auto;
+}
 
-    .container {
-      width: 100%;
-      max-width: 520px;
-      text-align: center;
-    }
+/* TOP BUTTON */
+.top-btn{
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  color:#111;
+  font-size:19px;
+  font-weight:900;
+  padding:17px;
+  border-radius:15px;
+  margin-bottom:18px;
 
-    .badge {
-      display: inline-block;
-      background: #16a34a;
-      padding: 8px 16px;
-      border-radius: 30px;
-      font-size: 14px;
-      font-weight: bold;
-      margin-bottom: 18px;
-    }
+  background:linear-gradient(
+    135deg,
+    #fff2a6,
+    #ffd700,
+    #c99700,
+    #ffe76a
+  );
 
-    .card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 24px;
-      padding: 30px 22px;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 20px 50px rgba(0,0,0,.3);
-    }
+  box-shadow:
+    0 0 20px rgba(255,215,0,.45),
+    inset 0 1px 1px white;
+}
 
-    .logo {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      background: #2563eb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 18px;
-      font-size: 28px;
-      font-weight: 900;
-    }
+/* VERIFIED */
+.badge{
+  width:max-content;
+  margin:0 auto 18px;
+  padding:9px 18px;
+  border-radius:30px;
+  background:#08b957;
+  font-weight:bold;
+}
 
-    h1 {
-      font-size: 34px;
-      margin-bottom: 8px;
-    }
+/* CARD */
+.card{
+  padding:28px 20px;
+  border-radius:25px;
 
-    .subtitle {
-      color: #cbd5e1;
-      font-size: 16px;
-      line-height: 1.6;
-      margin-bottom: 25px;
-    }
+  background:rgba(24,34,58,.92);
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-bottom: 25px;
-    }
+  border:1px solid rgba(255,215,0,.45);
 
-    .stat {
-      background: rgba(255,255,255,.08);
-      border-radius: 15px;
-      padding: 16px 8px;
-    }
+  box-shadow:
+    0 0 35px rgba(255,215,0,.12),
+    inset 0 0 25px rgba(255,215,0,.04);
+}
 
-    .stat strong {
-      display: block;
-      font-size: 22px;
-      margin-bottom: 5px;
-    }
+/* LOGO */
+.logo{
+  width:100px;
+  height:100px;
+  margin:auto;
+  border-radius:50%;
 
-    .stat span {
-      color: #cbd5e1;
-      font-size: 13px;
-    }
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-    .features {
-      text-align: left;
-      margin-bottom: 25px;
-    }
+  font-size:25px;
+  font-weight:900;
 
-    .feature {
-      background: rgba(255,255,255,.06);
-      padding: 13px;
-      border-radius: 12px;
-      margin-bottom: 9px;
-      color: #e2e8f0;
-    }
+  color:#111;
 
-    .join-btn {
-      display: block;
-      width: 100%;
-      background: #229ed9;
-      color: white;
-      text-decoration: none;
-      padding: 17px;
-      border-radius: 14px;
-      font-size: 18px;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      transition: .2s;
-    }
+  background:
+    linear-gradient(
+      135deg,
+      #fff4a3,
+      #ffd700,
+      #b8860b
+    );
 
-    .join-btn:hover {
-      transform: translateY(-2px);
-    }
+  border:3px solid #ffe878;
 
-    .countdown {
-      margin-top: 18px;
-      color: #cbd5e1;
-      font-size: 14px;
-    }
+  box-shadow:0 0 25px rgba(255,215,0,.45);
+}
 
-    #timer {
-      color: #fff;
-      font-weight: bold;
-      font-size: 18px;
-    }
+h1{
+  text-align:center;
+  margin-top:20px;
+  font-size:34px;
 
-    .footer {
-      margin-top: 20px;
-      color: #94a3b8;
-      font-size: 12px;
-    }
+  background:linear-gradient(
+    90deg,
+    #fff4a3,
+    #ffd700,
+    #fff
+  );
 
-    @media(max-width:400px) {
-      h1 {
-        font-size: 28px;
-      }
+  -webkit-background-clip:text;
+  color:transparent;
+}
 
-      .card {
-        padding: 25px 16px;
-      }
-    }
-  </style>
+.subtitle{
+  text-align:center;
+  color:#cbd5e1;
+  line-height:1.6;
+  margin:12px 0 22px;
+}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.stat{
+  padding:18px 8px;
+  text-align:center;
+  border-radius:16px;
+
+  background:rgba(255,215,0,.08);
+  border:1px solid rgba(255,215,0,.18);
+}
+
+.stat strong{
+  display:block;
+  font-size:24px;
+  color:#ffd700;
+}
+
+.stat span{
+  color:#cbd5e1;
+  font-size:13px;
+}
+
+/* FEATURES */
+.features{
+  margin-top:22px;
+}
+
+.feature{
+  margin-bottom:11px;
+  padding:15px;
+  border-radius:14px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,215,0,.13),
+      rgba(255,255,255,.04)
+    );
+
+  border-left:3px solid #ffd700;
+
+  color:#f8fafc;
+  font-size:16px;
+}
+
+/* BUTTON */
+.main-btn{
+  display:block;
+  text-align:center;
+  text-decoration:none;
+
+  margin-top:22px;
+  padding:18px;
+
+  border-radius:15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff0a0,
+      #ffd700,
+      #c99700
+    );
+
+  color:#111;
+  font-size:19px;
+  font-weight:900;
+
+  box-shadow:
+    0 0 22px rgba(255,215,0,.35);
+}
+
+.countdown{
+  text-align:center;
+  margin-top:16px;
+  color:#94a3b8;
+  font-size:14px;
+}
+
+#timer{
+  color:#ffd700;
+  font-size:19px;
+  font-weight:bold;
+}
+
+.footer{
+  text-align:center;
+  margin-top:20px;
+  color:#64748b;
+  font-size:12px;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <div class="badge">✓ VERIFIED COMMUNITY</div>
+  <!-- TELEGRAM BUTTON TOP -->
+  <a
+    class="top-btn"
+    id="topCta"
+    href="https://t.me/+dwow3XCnuFZkNmE1">
+    🚀 JOIN TELEGRAM FREE
+  </a>
 
-    <div class="card">
+  <div class="badge">
+    ✓ VERIFIED COMMUNITY
+  </div>
 
-      <div class="logo">
-        RAFSA
+  <div class="card">
+
+    <div class="logo">
+      RAFSA
+    </div>
+
+    <h1>TEAM RAFSA</h1>
+
+    <p class="subtitle">
+      Join our Telegram community for regular updates,
+      announcements and community information.
+    </p>
+
+    <div class="stats">
+
+      <div class="stat">
+        <strong id="memberCount">2,845</strong>
+        <span>Members</span>
       </div>
 
-      <h1>TEAM RAFSA</h1>
-
-      <p class="subtitle">
-        Join our free Telegram community and stay connected
-        with the latest updates, announcements and community information.
-      </p>
-
-      <div class="stats">
-
-        <div class="stat">
-          <strong id="memberCount">2,845</strong>
-          <span>Members</span>
-        </div>
-
-        <div class="stat">
-          <strong>2023</strong>
-          <span>Since</span>
-        </div>
-
-      </div>
-
-      <div class="features">
-
-        <div class="feature">
-          ⚡ Regular community updates
-        </div>
-
-        <div class="feature">
-          📢 Important announcements
-        </div>
-
-        <div class="feature">
-          👥 Active community support
-        </div>
-
-        <div class="feature">
-          🔐 Free Telegram access
-        </div>
-
-      </div>
-
-      <a
-        id="mainCta"
-        class="join-btn"
-        href="https://t.me/+dwow3XCnuFZkNmE1"
-      >
-        🚀 JOIN TELEGRAM FREE
-      </a>
-
-      <div class="countdown">
-        Automatic redirect in
-        <span id="timer">40</span> seconds
-      </div>
-
-      <div class="footer">
-        © 2026 Team RAFSA. All rights reserved.
+      <div class="stat">
+        <strong>2023</strong>
+        <span>Since</span>
       </div>
 
     </div>
+
+    <div class="features">
+
+      <div class="feature">
+        ⚡ Regular Community Updates
+      </div>
+
+      <div class="feature">
+        📢 Important Announcements
+      </div>
+
+      <div class="feature">
+        👥 Active Community Support
+      </div>
+
+      <div class="feature">
+        🔐 Free Telegram Access
+      </div>
+
+    </div>
+
+    <a
+      class="main-btn"
+      id="mainCta"
+      href="https://t.me/+dwow3XCnuFZkNmE1">
+      🚀 JOIN TELEGRAM FREE
+    </a>
+
+    <div class="countdown">
+      Automatic redirect in
+      <span id="timer">40</span> seconds
+    </div>
+
+    <div class="footer">
+      © 2026 Team RAFSA
+    </div>
+
   </div>
+</div>
 
-  <script>
+<script>
 
-    const TARGET =
-      "https://t.me/+dwow3XCnuFZkNmE1";
+const TARGET =
+"https://t.me/+dwow3XCnuFZkNmE1";
 
-    let seconds = 40;
-    let redirected = false;
+let seconds = 40;
+let redirected = false;
 
-    const timerElement =
-      document.getElementById("timer");
+const timer =
+document.getElementById("timer");
 
-    const interval = setInterval(function () {
+const interval =
+setInterval(function(){
 
-      seconds--;
+  seconds--;
 
-      timerElement.textContent = seconds;
+  timer.textContent = seconds;
 
-      if (seconds <= 0 && !redirected) {
+  if(seconds <= 0 && !redirected){
 
-        redirected = true;
+    redirected = true;
 
-        clearInterval(interval);
+    clearInterval(interval);
 
-        window.location.href = TARGET;
-      }
+    window.location.href = TARGET;
+  }
 
-    }, 1000);
-
-
-    document
-      .getElementById("mainCta")
-      .addEventListener("click", function () {
-
-        redirected = true;
-
-        clearInterval(interval);
-
-      });
+},1000);
 
 
-    let count = 2845;
+function stopRedirect(){
 
-    setInterval(function () {
+  redirected = true;
 
-      count += Math.random() > 0.4 ? 1 : -1;
+  clearInterval(interval);
+}
 
-      if (count < 2800) {
-        count = 2800;
-      }
 
-      document
-        .getElementById("memberCount")
-        .textContent =
-        count.toLocaleString("en-IN");
+document
+.getElementById("topCta")
+.addEventListener("click",stopRedirect);
 
-    }, 3000);
 
-  </script>
+document
+.getElementById("mainCta")
+.addEventListener("click",stopRedirect);
+
+
+let count = 2845;
+
+setInterval(function(){
+
+  count += Math.random() > .4 ? 1 : -1;
+
+  if(count < 2800)
+    count = 2800;
+
+  document
+  .getElementById("memberCount")
+  .textContent =
+  count.toLocaleString("en-IN");
+
+},3000);
+
+</script>
 
 </body>
 </html>
